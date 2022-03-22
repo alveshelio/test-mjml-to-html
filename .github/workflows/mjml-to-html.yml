@@ -1,0 +1,17 @@
+name: Convert MLML templates to HTML templates
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        input: [templates]
+        output: [dist]
+
+    steps:
+      - uses: alveshelio/mjml-to-html-github-action@v1.0.0
+        with:
+          input: ${{matrix.input}}
+          output: ${{matrix.output}}
