@@ -134,18 +134,9 @@
       <mj-section padding="0">
         <mj-column>
           <mj-text css-class="text-body">
-            <h1>Email changed successfully</h1>
-
-            <p>Hi $displayName,</p>
-
-            <p>
-              This is an email to inform you that your email was changed successfully. If you have not requested this change, please contact Avansai support.
-            </p>
-
-            <p>
-              Best,<br />
-              Team Avansai
-            </p>
+            <h1>{{ title }}</h1>
+            <p>{{ greeting }}</p>
+            <p>{{ content }}</p>
           </mj-text>
         </mj-column>
       </mj-section>
