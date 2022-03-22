@@ -11,7 +11,11 @@ jobs:
         output: [dist]
 
     steps:
-      - uses: alveshelio/mjml-to-html-github-action@v1.0.5
+      - uses: W0lfw00d/mjml-github-action@0.0.2
+
         with:
-          input: ${{matrix.input}}
-          output: ${{matrix.output}}
+            input_dir: 'templates'
+            output_dir: 'dist'
+#        with:
+#          input: ${{matrix.input}}
+#          output: ${{matrix.output}}
