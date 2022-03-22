@@ -109,7 +109,7 @@
     </mj-style>
     <mj-title>{{ title }}</mj-title>
     <mj-preview
-    >Your email was changed successfully</mj-preview
+    >{{ preview }}</mj-preview
     >
   </mj-head>
 
