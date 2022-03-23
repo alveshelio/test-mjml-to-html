@@ -2,23 +2,21 @@ name: Convert MLML templates to HTML templates
 
 on: [push]
 
-jobs:
-  run:
-    runs-on: ubuntu-18.04
-#    strategy:
-#      matrix:
-#        input: [templates]
-#        output: [dist]
 
+on: [push]
+
+jobs:
+  mjml_job:
+    runs-on: ubuntu-latest
+    name: Compile mjml templates to html
     steps:
+      # To use this repository's private action,
+      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
       - name: Compile
-      - uses: W0lfw00d/mjml-github-action@0.0.2
-
+        uses: W0lfw00d/mjml-github-action@0.0.2
+        id: templates
         with:
-            input_dir: 'templates'
-            output_dir: 'dist'
-#        with:
-#          input: ${{matrix.input}}
-#          output: ${{matrix.output}}
+          input_dir: 'templates'
+          output_dir: 'dist'
